@@ -8,7 +8,7 @@
     <title>Joseph Naegele</title>
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-    <link rel="stylesheet" href="http://josephnaegele.com/theme/pure/css/layouts/side-menu.css">
+    <link rel="stylesheet" href="/theme/pure/css/layouts/side-menu.css">
 
 </head>
 
@@ -23,18 +23,18 @@
 
     <div id="menu">
         <div class="pure-menu pure-menu-open">
-            <a class="pure-menu-heading" href="http://josephnaegele.com">HOME</a>
+            <a class="pure-menu-heading" href="/">HOME</a>
 
             <ul>
 
                     <li class=" menu-item-divided ">
-                        <a href="http://josephnaegele.com/pages/about.html">About</a>
+                        <a href="/about.html">About</a>
                     </li>
                     <li class="">
-                        <a href="http://josephnaegele.com/pages/projects.html">Projects</a>
+                        <a href="/projects.html">Projects</a>
                     </li>
                     <li class="">
-                        <a href="http://josephnaegele.com/pages/resume.html">Resume</a>
+                        <a href="/resume.html">Resume</a>
                     </li>
 
                 <li class="menu-item-divided">
@@ -70,6 +70,6 @@
     </div> <!-- main -->
 
 </div> <!-- layout -->
-<script src="http://josephnaegele.com/theme/pure/js/ui.js"></script>
+<script src="/theme/pure/js/ui.js"></script>
 </body>
 </html>

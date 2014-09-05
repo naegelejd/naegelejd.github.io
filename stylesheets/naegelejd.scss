@@ -1,0 +1,65 @@
+$header_height: 60px;
+$footer_height: 30px;
+$sidebar_width: 100px;
+
+@import url("normalize.css");
+
+/* @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700); */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    background: yellow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $header_height !important;
+    opacity: .8;
+}
+
+.content {
+    position: relative;
+    height: 100%;
+    width: 540px; /* Sizing - any length */
+    left:$sidebar_width;
+    padding: $header_height 0 $footer_height 0; /* Header height and footer height */
+    margin: 0 auto 0 auto; /* Center content */
+}
+
+.sidebar {
+    background: red;
+    top: $header_height;
+    left: 0;
+    bottom: $footer_height;
+    width: $sidebar_width;
+    // position: absolute;
+    position: fixed;
+}
+
+#scrollable {
+    background:green;
+    height: 100%;
+    min-width: 300px;
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow: auto;
+}
+
+footer {
+    width: 100%;
+    background: yellow;
+    position: fixed;
+    bottom: 0;
+    height: $footer_height;;
+}
