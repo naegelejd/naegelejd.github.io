@@ -1,1 +1,3 @@
 .sass*
+*.html
+*.css.map

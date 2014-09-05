@@ -1,12 +1,17 @@
-TEMPLATE := template.html
+TEMPLATE := index.tmpl
 STYLE := stylesheets/naegelejd.css
 CONTENT := index.html about.html projects.html resume.html
+ANALYTICS := analytics.stub
+OPTS :=
 SOURCE := $(STYLE) $(CONTENT)
 
 all: $(SOURCE)
 
-%.html: content/%.md $(TEMPLATE) ga.html
-	pandoc -t html5 -o $@ --template=$(TEMPLATE) -H ga.html $<
+release: OPTS += -H $(ANALYTICS)
+release: $(SOURCE) $(ANALYTICS)
+
+%.html: content/%.md $(TEMPLATE) $(ANALYTICS)
+	pandoc -t html5 -o $@ --template=$(TEMPLATE) $(OPTS) $<
 
 %.css: %.scss
 	sass $< $@
