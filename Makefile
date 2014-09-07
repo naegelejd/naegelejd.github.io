@@ -1,24 +1,23 @@
-TEMPLATE := index.tmpl
-STYLE := stylesheets/naegelejd.css
-CONTENT := index.html about.html projects.html resume.html
-ANALYTICS := analytics.stub
-OPTS :=
-SOURCE := $(STYLE) $(CONTENT)
+OUTPUT := index.html
+STYLE := naegelejd.css
+SOURCE := naegelejd.md
+EXTRA := footer.html
 
-all: $(SOURCE)
+all: $(OUTPUT)
 
-release: OPTS += -H $(ANALYTICS)
-release: $(SOURCE) $(ANALYTICS)
+release: EXTRA := footer+analytics.html
+release: $(OUTPUT)
 
-%.html: content/%.md $(TEMPLATE) $(ANALYTICS)
-	pandoc -t html5 -o $@ --template=$(TEMPLATE) $(OPTS) $<
+index.html: $(SOURCE) $(STYLE) $(EXTRA)
+	pandoc -s -S --toc --toc-depth=1 -t html5 -A $(EXTRA) -c $(STYLE) -o $@ $(SOURCE)
 
 %.css: %.scss
 	sass $< $@
 
-test: $(SOURCE)
+.PHONY: test
+test: $(OUTPUT)
 	go run server.go
 
 .PHONY: clean
 clean:
-	rm -f $(SOURCE)
+	rm -f $(OUTPUT) $(STYLE) $(STYLE).map

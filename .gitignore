@@ -1,3 +1,4 @@
-.sass*
-*.html
+index.html
+naegelejd.css
 *.css.map
+.sass*

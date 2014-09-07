@@ -1,6 +1,18 @@
-% Resume
+% Joseph Naegele
 
-## Experience
+About
+=====
+
+I am a computer engineer employed by the Functional MRI Facility at the National Institutes of Mental Health.
+
+I enjoy working on programming language design and runtime implementations.
+
+
+Resume
+======
+
+Experience
+----------
 
 Computer Programmer | Sept 2011 – Now | Kelly Gov't Solutions, FMRIF/NIH | Bethesda, MD
 
@@ -10,7 +22,8 @@ Computer Programmer | Sept 2011 – Now | Kelly Gov't Solutions, FMRIF/NIH | Bet
 - Constructed an image archival application to index 1.2 billion online DICOM images
 - Developed a C library to interface multiple versions of a proprietary GE file format.
 
-## Education
+Education
+---------
 
 B.S. in Computer Engineering | University of Maryland, College Park | Summer 2011
 
@@ -22,13 +35,15 @@ B.S. in Computer Engineering | University of Maryland, College Park | Summer 201
 
     Reports temperature, wind velocity reporting and serial communication
 
-## Awards
+Awards
+------
 
 2013 Distinguished Achievement Award – Kelly Government Solutions
 
 - For technical skill, enthusiasm, capacity for learning, and completion of several complex projects.
 
-## Technical Qualifications
+Technical Qualifications
+------------------------
 
 ### Languages
 C, Python, C++, Java, SQL, Haskell, x86/PIC/MIPS assembly, Go
@@ -43,13 +58,26 @@ multitasking, scheduling, memory management, file systems
 ### Personal Projects
 
 [Luci](http://josephnaegele.com/luci) – a lightweight programming language
+
 - Imperative, dynamically-typed, bytecode-compiled
 - Automatic memory management via garbage collection
 
 [Nolli](https://github.com/naegelejd/nolli) - an embeddable, statically-typed programming language
+
 - Fully re-entrant
 - No dependencies
 
 [DuneOS](https://github.com/naegelejd/duneOS) – simple x86 Unix-like operating system
+
 - Multitasking with preemptive scheduling
 - Virtual memory, virtual file system
+
+Projects
+========
+
+- [Luci](https://naegelejd.github.com/luci) - A dynamically typed interpreted language
+- [Nolli](https://github.com/naegelejd/nolli) - A statically typed embeddable language
+
+Links
+=====
+
