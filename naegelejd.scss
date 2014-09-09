@@ -1,3 +1,10 @@
+$border_color: yellow;
+$bg_color: #AAAAAA;
+$bg_image: url('images/comp001.jpg');
+// $font: Verdana, sans-serif;
+// $font: "Times New Roman", serif;
+$font: "Lucida Console", Monaco, monospace;
+
 @import url("normalize.css");
 
 body {
@@ -5,37 +12,54 @@ body {
     padding-right: 1em;
     padding-left: 1em;
     max-width: 44em;
-    border-left: 1px solid yellow;
-    border-right: 1px solid yellow;
-    /* color: black; */
-    /* font-family: Verdana, sans-serif; */
-    font-family: "Times New Roman", serif;
-    font-size: 100%;
+    border-left: 1px solid $border_color;
+    border-right: 1px solid $border_color;
     line-height: 140%;
-    /* color: #333; */
-    background-color: gray;
+    font-family: $font;
+    font-size: 100%;
+    background-color: $bg_color;;
+
+    background-image: $bg_image;
+    background-repeat: repeat;
+    color: MidnightBlue;
 }
+
+nav {
+    text-align:center;
+    ul {
+        margin: auto;
+        padding: 4px 0px;
+    }
+
+    li {
+        display: inline;
+        text-align:center;
+    }
+}
+
 pre {
     border: 1px dotted gray;
-    background-color: #ececec;
-    color: #1111111;
+    background-color: #BBBBBB;
+    // color: #1111111;
     padding: 0.5em;
 }
+
 code {
     font-family: monospace;
 }
+
 h1 a, h2 a, h3 a, h4 a, h5 a {
     text-decoration: none;
-    /* color: #7a5ada; */
 }
-h1, h2, h3, h4, h5 { font-family: verdana;
+
+h1, h2, h3, h4, h5 {
     font-weight: bold;
     border-bottom: 1px dotted black;
-    /*color: #7a5ada;*/
 }
 
 h1 {
     font-size: 130%;
+    text-align: center;
 }
 
 h2 {
@@ -61,20 +85,21 @@ h1.title {
     font-weight: bold;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
-    text-align: left;
+    // text-align: left;
+    text-align: center;
     border: none;
 }
 
 dt code {
     font-weight: bold;
 }
+
 dd p {
     margin-top: 0;
 }
 
-#footer {
+footer {
     padding-top: 1em;
-    font-size: 70%;
-    /* color: gray; */
+    font-size: 80%;
     text-align: center;
 }
