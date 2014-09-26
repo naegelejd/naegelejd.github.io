@@ -1,6 +1,7 @@
 $border_color: yellow;
 $bg_color: #AAAAAA;
 $bg_image: url('images/comp001.jpg');
+$text_color: MidnightBlue;
 // $font: Verdana, sans-serif;
 // $font: "Times New Roman", serif;
 $font: "Lucida Console", Monaco, monospace;
@@ -17,11 +18,10 @@ body {
     line-height: 140%;
     font-family: $font;
     font-size: 100%;
-    background-color: $bg_color;;
-
+    background-color: $bg_color;
     background-image: $bg_image;
     background-repeat: repeat;
-    color: MidnightBlue;
+    color: $text_color;
 }
 
 nav {
@@ -39,7 +39,7 @@ nav {
 
 pre {
     border: 1px dotted gray;
-    background-color: #BBBBBB;
+    background-color: #EEEEEE;
     // color: #1111111;
     padding: 0.5em;
 }
@@ -48,18 +48,26 @@ code {
     font-family: monospace;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a {
-    text-decoration: none;
-}
-
 h1, h2, h3, h4, h5 {
     font-weight: bold;
     border-bottom: 1px dotted black;
+    a {
+        text-decoration: none;
+    }
 }
 
 h1 {
     font-size: 130%;
     text-align: center;
+    &.title {
+        font-size: 200%;
+        font-weight: bold;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        // text-align: left;
+        text-align: center;
+        border: none;
+    }
 }
 
 h2 {
@@ -78,16 +86,6 @@ h4 {
 h5 {
     font-size: 90%;
     font-style: italic;
-}
-
-h1.title {
-    font-size: 200%;
-    font-weight: bold;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    // text-align: left;
-    text-align: center;
-    border: none;
 }
 
 dt code {

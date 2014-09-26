@@ -6,4 +6,4 @@ Dependencies:
 
 To build, run `make`.
 
-To build release version (with Google Analytics, etc.), run `make -B release`.
+To build a debug version (without Google Analytics, etc.), run `make -B debug`.

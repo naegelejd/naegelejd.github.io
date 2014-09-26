@@ -8,7 +8,7 @@ National Institutes of Mental Health. My work consists of website development,
 database design, development of medical image reconstruction software,
 and construction of various end-user command-line tools.
 
-In my spare time I  enjoy working on programming language design and runtime
+In my spare time I enjoy working on programming language design and runtime
 implementations. I also like learning new programming languages, experimenting
 with embedded systems, and customizing my shell/editor/etc.
 
