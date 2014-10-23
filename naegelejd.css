@@ -7,11 +7,7 @@ body {
   border-left: 1px solid yellow;
   border-right: 1px solid yellow;
   line-height: 140%;
-  font-family: "Lucida Console", Monaco, monospace;
   font-size: 100%;
-  background-color: #AAAAAA;
-  background-image: url("images/comp001.jpg");
-  background-repeat: repeat;
   color: MidnightBlue; }
 
 nav {

@@ -1,10 +1,5 @@
 $border_color: yellow;
-$bg_color: #AAAAAA;
-$bg_image: url('images/comp001.jpg');
 $text_color: MidnightBlue;
-// $font: Verdana, sans-serif;
-// $font: "Times New Roman", serif;
-$font: "Lucida Console", Monaco, monospace;
 
 @import url("normalize.css");
 
@@ -16,11 +11,7 @@ body {
     border-left: 1px solid $border_color;
     border-right: 1px solid $border_color;
     line-height: 140%;
-    font-family: $font;
     font-size: 100%;
-    background-color: $bg_color;
-    background-image: $bg_image;
-    background-repeat: repeat;
     color: $text_color;
 }
 
@@ -40,7 +31,6 @@ nav {
 pre {
     border: 1px dotted gray;
     background-color: #EEEEEE;
-    // color: #1111111;
     padding: 0.5em;
 }
 
