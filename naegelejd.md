@@ -3,8 +3,8 @@
 About
 =====
 
-I am a computer engineer employed by the Functional MRI Facility at the
-National Institutes of Mental Health. My work consists of website development,
+I am a software developer employed by the Functional MRI Facility at the
+National Institute of Mental Health. My work consists of website development,
 database design, development of medical image reconstruction software,
 and construction of various end-user command-line tools.
 
