@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title></title>
+</head>
+<body>
+
+<p>Invert text using Unicode</p>
+<form action="">
+  <input type="text" id="normal" />
+  <button type="button" id="invert">Invert</button>
+</form>
+<p id="upside"></p>
+
+<script type="text/javascript" charset="utf-8">
+var lookup = {
+    'A': '∀', 'B': '𐐒', 'C': 'Ↄ', 'D': '◖', 'E': 'Ǝ', 'F': 'Ⅎ',
+    'G': '⅁', 'H': 'H', 'I': 'I', 'J': 'ſ', 'K': '⋊', 'L': '⅂',
+    'M': 'W', 'N': 'ᴎ', 'O': 'O', 'P': 'Ԁ', 'Q': 'Ό', 'R': 'ᴚ',
+    'S': 'S', 'T': '⊥', 'U': '∩', 'V': 'ᴧ', 'W': 'M', 'X': 'X',
+    'Y': '⅄', 'Z': 'Z', 'a': 'ɐ', 'b': 'q', 'c': 'ɔ', 'd': 'p',
+    'e': 'ǝ', 'f': 'ɟ', 'g': 'ƃ', 'h': 'ɥ', 'i': 'ı', 'j': 'ɾ',
+    'k': 'ʞ', 'l': 'ʃ', 'm': 'ɯ', 'n': 'u', 'o': 'o', 'p': 'd',
+    'q': 'b', 'r': 'ɹ', 's': 's', 't': 'ʇ', 'u': 'n', 'v': 'ʌ',
+    'w': 'ʍ', 'x': 'x', 'y': 'ʎ', 'z': 'z', '0': '0', '1': 'Ɩ',
+    '2': '2', '3': 'Ɛ', '4': 'ᔭ', '5': 'ϛ', '6': '9', '7': 'Ɫ',
+    '8': '8', '9': '6', '.': '˙', '`': ',', '?': '¿', '!': '¡',
+    '\'': ',', ',': '\'', '<': '>', '>': '<', '&': '⅋', '_': '‾',
+};
+document.getElementById("invert").onclick = function(){
+    orig = document.getElementById("normal").value;
+    inverted = ""
+    for (i = 0; i < orig.length; i++) {
+        c = orig.charAt(i);
+        if (c in lookup) {
+            inverted += lookup[c];
+        } else {
+            inverted += c;
+        }
+    }
+    document.getElementById("upside").innerHTML = inverted;
+};
+</script>
+
+</body>
+</html>
