@@ -62,12 +62,12 @@ C, Python, Go, C++, Java, SQL, Haskell, Rust, Javascript, HTML, x86/PIC/MIPS ass
 
 ### Personal Projects
 
-[Luci](http://josephnaegele.com/luci) – a lightweight programming language
+[Luci](http://josephnaegele.com/luci) - a lightweight programming language
 
 - Imperative, dynamically-typed, bytecode-compiled
 - Automatic memory management via garbage collection
 
-[DuneOS](https://github.com/naegelejd/duneOS) – simple x86 Unix-like operating system
+[DuneOS](https://github.com/naegelejd/duneOS) - simple x86 Unix-like operating system
 
 - Multitasking with preemptive scheduling
 - Virtual memory, virtual file system

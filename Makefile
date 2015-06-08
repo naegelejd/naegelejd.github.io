@@ -22,3 +22,6 @@ test: $(OUTPUT)
 .PHONY: clean
 clean:
 	rm -f $(OUTPUT) $(STYLE) $(STYLE).map
+
+#naegelejd.pdf: $(SOURCE)
+#	pandoc $(OPTS) --latex-engine=xelatex -t latex -o $@ $(SOURCE)
