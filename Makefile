@@ -1,16 +1,17 @@
-OUTPUT := index.html
+OUTPUT := index.html resume.html links.html snippets.html
 STYLE := naegelejd.css
 SOURCE := naegelejd.md
-EXTRA := footer+analytics.html
-OPTS := --standalone --smart --toc --toc-depth=1 -f markdown+definition_lists
+FOOTER := footer.html
+HEADER := header.html
+OPTS := --standalone --smart -f markdown+definition_lists
 
-all: $(OUTPUT)
+all: $(OUTPUT) $(STYLE)
 
-debug: EXTRA := footer.html
+debug: FOOTER := footer-no-analytics.html
 debug: $(OUTPUT)
 
-index.html: $(SOURCE) $(STYLE) $(EXTRA)
-	pandoc $(OPTS) -t html5 -A $(EXTRA) -c $(STYLE) -o $@ $(SOURCE)
+%.html: %.md $(HEADER) $(FOOTER)
+	pandoc $(OPTS) -t html5 -B $(HEADER) -A $(FOOTER) -c $(STYLE) -o $@ $<
 
 %.css: %.scss
 	sass $< $@
@@ -21,7 +22,7 @@ test: $(OUTPUT)
 
 .PHONY: clean
 clean:
-	rm -f $(OUTPUT) $(STYLE) $(STYLE).map
+	rm -f $(OUTPUT) $(STYLE).map
 
 #naegelejd.pdf: $(SOURCE)
 #	pandoc $(OPTS) --latex-engine=xelatex -t latex -o $@ $(SOURCE)

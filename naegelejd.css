@@ -4,20 +4,32 @@ body {
   padding-right: 1em;
   padding-left: 1em;
   max-width: 44em;
-  border-left: 1px solid yellow;
-  border-right: 1px solid yellow;
+  border-left: 1px dotted #efefef;
+  border-right: 1px dotted #efefef;
   line-height: 140%;
   font-size: 100%;
-  color: MidnightBlue; }
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300; }
 
 nav {
   text-align: center; }
   nav ul {
     margin: auto;
-    padding: 4px 0px; }
+    padding: .2em 0em; }
   nav li {
     display: inline;
     text-align: center; }
+    nav li a {
+      padding: .2em .8em; }
+
+a {
+  color: #39c;
+  font-weight: 400;
+  text-decoration: none; }
+
+img {
+  float: left;
+  margin: 0em 2em; }
 
 pre {
   border: 1px dotted gray;
@@ -36,7 +48,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 130%;
   text-align: center; }
-  h1.title {
+  h1.master {
     font-size: 200%;
     font-weight: bold;
     padding-top: 0.2em;

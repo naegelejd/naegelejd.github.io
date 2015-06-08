@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Snippets</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="naegelejd.css">
+</head>
+<body>
+<header>
+<h1 class="master">Joseph Naegele</h1>
+<nav id="TOC">
+<ul>
+<li><a href="/index.html">About</a></li>
+<li><a href="/resume.html">Resume</a></li>
+<li><a href="/links.html">Links</a></li>
+<li><a href="/snippets.html">Snippets</a></li>
+</ul>
+</nav>
+</header>
+<header>
+<h1 class="title">Snippets</h1>
+</header>
+<h3 id="haskell-and-c-warnings">Haskell and C++ warnings</h3>
+<p>C++ compilers will often spit out warnings for template errors multiple times per header. This dumb Haskell tool filters unique warnings.</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="co">-- Pass Clang/GCC output through this tool to find all unique warnings</span>
+<span class="kw">import </span><span class="dt">Data.List</span> (nub)
+
+main <span class="fu">=</span> interact findWarnings
+    <span class="kw">where</span> findWarnings <span class="fu">=</span> unlines <span class="fu">.</span> nub <span class="fu">.</span>
+              filter (\x <span class="ot">-&gt;</span> elem <span class="st">&quot;warning:&quot;</span> <span class="fu">$</span> words x) <span class="fu">.</span> lines</code></pre></div>
+<h3 id="python-print-in-place">Python print in place</h3>
+<p>Sometimes it’s useful to print things “in place” on the command line, e.g. progress percentage, “spinny” wheel:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#!/usr/bin/env python</span>
+<span class="im">import</span> sys
+<span class="im">from</span> time <span class="im">import</span> sleep
+
+i <span class="op">=</span> <span class="dv">0</span>
+<span class="cf">try</span>:
+    <span class="cf">while</span> <span class="va">True</span>:
+        sys.stdout.flush()
+        sys.stdout.write(<span class="st">&#39;</span><span class="ch">\r</span><span class="st">Your Label Here: </span><span class="sc">%d</span><span class="ch">\r</span><span class="st">&#39;</span> <span class="op">%</span> i)
+        i <span class="op">+=</span> <span class="dv">1</span>
+        sleep(.<span class="dv">02</span>)
+<span class="cf">except</span> <span class="pp">KeyboardInterrupt</span>:
+   <span class="cf">pass</span>
+<span class="bu">print</span>(<span class="st">&#39;&#39;</span>)</code></pre></div>
+<p>or</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">lines <span class="op">=</span> <span class="st">&#39;-\|/&#39;</span>
+...
+<span class="cf">for</span> line <span class="op">in</span> lines:
+    sys.stdout.flush()
+    sys.stdout.write(<span class="st">&#39;</span><span class="ch">\r</span><span class="sc">%s</span><span class="ch">\r</span><span class="st">&#39;</span> <span class="op">%</span> line)
+    time.sleep(.<span class="dv">2</span>)</code></pre></div>
+<h3 id="python-weather-forecast">Python weather forecast</h3>
+<p>This is a silly tool illustrating simple usage of the <code>requests</code> library to determine your location and weather forecast:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#!/usr/bin/env python</span>
+<span class="co"># -*- coding: utf-8 -*-</span>
+
+<span class="im">import</span> argparse
+<span class="im">import</span> requests
+<span class="im">import</span> datetime
+
+api <span class="op">=</span> <span class="st">&quot;http://api.openweathermap.org/data/2.5/&quot;</span>
+
+<span class="kw">def</span> main():
+    parser <span class="op">=</span> argparse.ArgumentParser(
+        formatter_class<span class="op">=</span>argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument(<span class="st">&#39;-l&#39;</span>, <span class="st">&#39;--location&#39;</span>, <span class="bu">help</span><span class="op">=</span><span class="st">&#39;location&#39;</span>)
+    parser.add_argument(<span class="st">&#39;-r&#39;</span>, <span class="st">&#39;--range&#39;</span>, <span class="bu">type</span><span class="op">=</span><span class="bu">int</span>, <span class="bu">help</span><span class="op">=</span><span class="st">&#39;days to report&#39;</span>)
+    parser.add_argument(<span class="st">&#39;-u&#39;</span>, <span class="st">&#39;--units&#39;</span>, choices<span class="op">=</span>[<span class="st">&#39;metric&#39;</span>, <span class="st">&#39;imperial&#39;</span>])
+    parser.add_argument(<span class="st">&#39;-f&#39;</span>, <span class="st">&#39;--forecast&#39;</span>, action<span class="op">=</span><span class="st">&#39;store_true&#39;</span>)
+    parser.set_defaults(location<span class="op">=</span>lookup_location(), <span class="bu">range</span><span class="op">=</span><span class="dv">5</span>, units<span class="op">=</span><span class="st">&#39;imperial&#39;</span>)
+    args <span class="op">=</span> parser.parse_args()
+
+    output <span class="op">=</span> []
+
+    params <span class="op">=</span> {<span class="st">&#39;q&#39;</span>:args.location, <span class="st">&#39;mode&#39;</span>:<span class="st">&#39;json&#39;</span>, <span class="st">&#39;units&#39;</span>:args.units}
+    current <span class="op">=</span> api <span class="op">+</span> <span class="st">&#39;weather&#39;</span>
+    r <span class="op">=</span> requests.get(current, params<span class="op">=</span>params)
+    data <span class="op">=</span> r.json()
+    weather <span class="op">=</span> data[<span class="st">&#39;main&#39;</span>]
+    temp <span class="op">=</span> weather[<span class="st">&#39;temp&#39;</span>]
+    unit <span class="op">=</span> <span class="st">&#39;F&#39;</span> <span class="cf">if</span> args.units <span class="op">==</span> <span class="st">&#39;imperial&#39;</span> <span class="cf">else</span> <span class="st">&#39;C&#39;</span>
+    humidity <span class="op">=</span> weather[<span class="st">&#39;humidity&#39;</span>]
+    output.append(<span class="st">u&quot;Current: </span><span class="sc">%.2f</span><span class="st">˚</span><span class="sc">%s</span><span class="st"> @ </span><span class="sc">%d%%</span><span class="st"> humidity&quot;</span> <span class="op">%</span> (temp, unit, humidity))
+
+    <span class="cf">if</span> args.forecast:
+        forecast <span class="op">=</span> api <span class="op">+</span> <span class="st">&#39;forecast/daily&#39;</span>
+        params[<span class="st">&#39;cnt&#39;</span>] <span class="op">=</span> args.<span class="bu">range</span>
+        r <span class="op">=</span> requests.get(forecast, params<span class="op">=</span>params)
+        data <span class="op">=</span> r.json()
+        days <span class="op">=</span> data[<span class="st">&#39;list&#39;</span>]
+        <span class="cf">for</span> i, day <span class="op">in</span> <span class="bu">enumerate</span>(days):
+            timestamp <span class="op">=</span> day[<span class="st">&#39;dt&#39;</span>]
+            dayname <span class="op">=</span> datetime.datetime.fromtimestamp(timestamp).strftime(<span class="st">&quot;%a&quot;</span>)
+            weather <span class="op">=</span> day[<span class="st">&#39;weather&#39;</span>][<span class="dv">0</span>][<span class="st">&#39;main&#39;</span>]
+            temp_min <span class="op">=</span> day[<span class="st">&#39;temp&#39;</span>][<span class="st">&#39;min&#39;</span>]
+            temp_max <span class="op">=</span> day[<span class="st">&#39;temp&#39;</span>][<span class="st">&#39;max&#39;</span>]
+            humidity <span class="op">=</span> day[<span class="st">&#39;humidity&#39;</span>]
+            output.append(<span class="st">u&quot;</span><span class="sc">%s</span><span class="st">: </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%.2f</span><span class="st">-</span><span class="sc">%.2f</span><span class="st">˚</span><span class="sc">%s</span><span class="st"> @ </span><span class="sc">%s%%</span><span class="st"> humidity&quot;</span> <span class="op">%</span> (
+                    dayname, weather, temp_min, temp_max, unit, humidity))
+
+    <span class="bu">print</span>(<span class="st">u&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>.join(output).encode(<span class="st">&#39;utf-8&#39;</span>))
+
+<span class="kw">def</span> lookup_location():
+    r <span class="op">=</span> requests.get(<span class="st">&quot;http://ipinfo.io/json&quot;</span>)
+    data <span class="op">=</span> r.json()
+    loc <span class="op">=</span> data[<span class="st">&#39;city&#39;</span>] <span class="op">+</span> <span class="st">&#39;,&#39;</span> <span class="op">+</span> data[<span class="st">&#39;region&#39;</span>]
+    <span class="cf">return</span> loc
+
+<span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:
+    main()</code></pre></div>
+<h3 id="filepath-traversal-in-go">Filepath traversal in Go</h3>
+<p>Go’s standard library provides a <code>Walk</code> function in the <code>filepath</code> package. This function takes a <code>type WalkFunc func(path string, info os.FileInfo, err error) error</code> as an argument, which is then called for each file or directory in the tree. There are some cases where it’s more convenient to iterate over each file/directory and actively do something with the filepath:</p>
+<div class="sourceCode"><pre class="sourceCode go"><code class="sourceCode go"><span class="kw">package</span> main
+
+<span class="kw">import</span> (
+  <span class="st">&quot;fmt&quot;</span>
+  <span class="st">&quot;io/ioutil&quot;</span>
+  <span class="st">&quot;os&quot;</span>
+  <span class="st">&quot;path/filepath&quot;</span>
+)
+
+<span class="co">// Walk traverses a file tree in another goroutine, and returns</span>
+<span class="co">// a `chan` that will yield each traversed file path</span>
+<span class="kw">func</span> Walk(root <span class="dt">string</span>, follow <span class="dt">bool</span>) <span class="kw">chan</span> <span class="dt">string</span> {
+  ch := <span class="fu">make</span>(<span class="kw">chan</span> <span class="dt">string</span>)
+
+  root, err := filepath.Abs(root)
+  <span class="kw">if</span> err != <span class="ot">nil</span> {
+    <span class="fu">close</span>(ch)
+    <span class="kw">return</span> ch
+  }
+
+  stat := os.Lstat
+  <span class="kw">if</span> follow {
+    stat = os.Stat
+  }
+
+  <span class="kw">go</span> <span class="kw">func</span>() {
+    walk(root, ch, stat)
+    <span class="fu">close</span>(ch)
+  }()
+
+  <span class="kw">return</span> ch
+}
+
+<span class="kw">type</span> statter <span class="kw">func</span>(<span class="dt">string</span>) (os.FileInfo, <span class="dt">error</span>)
+
+<span class="kw">func</span> walk(path <span class="dt">string</span>, ch <span class="kw">chan</span> <span class="dt">string</span>, stat statter) {
+  info, err := stat(path)
+  <span class="kw">if</span> err != <span class="ot">nil</span> {
+    <span class="kw">return</span>
+  }
+
+  <span class="kw">if</span> info.IsDir() {
+    dirents, err := ioutil.ReadDir(path)
+    <span class="kw">if</span> err != <span class="ot">nil</span> {
+      <span class="kw">return</span>
+    }
+    <span class="kw">for</span> _, child := <span class="kw">range</span> dirents {
+      walk(filepath.Join(path, child.Name()), ch, stat)
+    }
+  }
+  ch &lt;- path
+}
+
+<span class="kw">func</span> main() {
+  root := os.Args[<span class="dv">1</span>]
+  <span class="kw">for</span> path := <span class="kw">range</span> Walk(root, <span class="ot">false</span>) {
+    fmt.Println(path)
+  }
+}</code></pre></div>
+<p>My implementation of <code>Walk</code> could easily be modified to return a <code>chan os.FileInfo</code> rather than just a channel of path names.</p>
+<footer>
+© 2015 Joseph Naegele <a href="/invert.html">.</a>
+</footer>
+<script src="scale.fix.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54475644-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

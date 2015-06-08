@@ -1,5 +1,4 @@
-$border_color: yellow;
-$text_color: MidnightBlue;
+$border_color: #efefef;
 
 @import url("normalize.css");
 
@@ -8,24 +7,43 @@ body {
     padding-right: 1em;
     padding-left: 1em;
     max-width: 44em;
-    border-left: 1px solid $border_color;
-    border-right: 1px solid $border_color;
+    border-left: 1px dotted $border_color;
+    border-right: 1px dotted $border_color;
     line-height: 140%;
     font-size: 100%;
-    color: $text_color;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
 }
 
 nav {
     text-align:center;
     ul {
         margin: auto;
-        padding: 4px 0px;
+        padding: .2em 0em;
     }
 
     li {
         display: inline;
         text-align:center;
+        a {
+            padding: .2em .8em;
+        }
     }
+}
+
+a {
+    color: #39c;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+img {
+    float: left;
+    margin: 0em 2em;
+// for centering the image:
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
 }
 
 pre {
@@ -49,12 +67,11 @@ h1, h2, h3, h4, h5 {
 h1 {
     font-size: 130%;
     text-align: center;
-    &.title {
+    &.master {
         font-size: 200%;
         font-weight: bold;
         padding-top: 0.2em;
         padding-bottom: 0.2em;
-        // text-align: left;
         text-align: center;
         border: none;
     }
