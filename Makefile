@@ -1,8 +1,9 @@
 OUTPUT := index.html resume.html links.html snippets.html
 STYLE := naegelejd.css
 SOURCE := naegelejd.md
-FOOTER := footer.html
+HEAD := head.html
 HEADER := header.html
+FOOTER := footer.html
 OPTS := --standalone --smart -f markdown+definition_lists
 
 all: $(OUTPUT) $(STYLE)
@@ -10,8 +11,8 @@ all: $(OUTPUT) $(STYLE)
 debug: FOOTER := footer-no-analytics.html
 debug: $(OUTPUT)
 
-%.html: %.md $(HEADER) $(FOOTER)
-	pandoc $(OPTS) -t html5 -B $(HEADER) -A $(FOOTER) -c $(STYLE) -o $@ $<
+%.html: %.md $(HEAD) $(HEADER) $(FOOTER)
+	pandoc $(OPTS) -t html5 -H $(HEAD) -B $(HEADER) -A $(FOOTER) -c $(STYLE) -o $@ $<
 
 %.css: %.scss
 	sass $< $@
