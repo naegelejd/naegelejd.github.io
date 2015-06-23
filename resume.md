@@ -7,7 +7,7 @@ Computer Programmer | Sept 2011 – Now | Kelly Gov't Solutions, FMRIF/NIH | Bet
 - Contributed to the [ISMRM Raw Data format](ismrmrd.github.io):
     - Wrote unit tests for the core C/C++ library
     - Developed Python, Java, and Golang implementations/bindings of the ISMRMRD specification
-    - Fixed bugs found by static analysis (Clang) and Valgrind
+    - Fixed bugs found by static analysis (Clang `scan-build`) and Valgrind
     - Deployed a continuous integration solution using Travis-CI and Github
 - Contributed to [Gadgetron](gadgetron.github.io), an open source medical image reconstruction framework:
     - Added support for creation of DICOM images
@@ -40,6 +40,9 @@ B.S. in Computer Engineering | University of Maryland, College Park | Summer 201
 
 ### Languages
 C, Python, Go, C++, Java, SQL, Haskell, Rust, Javascript, HTML, x86/PIC/MIPS assembly
+
+### Tools
+Git, GCC/Clang, LLVM, CMake, Vim, Eclipse, GDB, Valgrind, Bison, Flex, QEMU
 
 ### Personal Projects
 
