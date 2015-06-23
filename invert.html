@@ -12,9 +12,9 @@
 <body>
 
 <p>Invert text using Unicode</p>
-<form action="">
+<form action="" id="invert" >
   <input type="text" id="normal" />
-  <button type="button" id="invert">Invert</button>
+  <input type="submit" value="Invert" />
 </form>
 <p id="upside"></p>
 
@@ -33,7 +33,8 @@ var lookup = {
     '8': '8', '9': '6', '.': '˙', '`': ',', '?': '¿', '!': '¡',
     '\'': ',', ',': '\'', '<': '>', '>': '<', '&': '⅋', '_': '‾',
 };
-document.getElementById("invert").onclick = function(){
+
+document.getElementById("invert").onsubmit = function() {
     orig = document.getElementById("normal").value;
     inverted = ""
     for (i = 0; i < orig.length; i++) {
@@ -45,6 +46,7 @@ document.getElementById("invert").onclick = function(){
         }
     }
     document.getElementById("upside").innerHTML = inverted;
+    return false;
 };
 </script>
 
