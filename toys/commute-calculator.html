@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Commuting Calculator!!!</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="/naegelejd.css">
+  <style>
+    .centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 4px;
+    }
+    .button {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Calculate how much of your life you've spent commuting!!!</h1>
+
+  <form action="" id="calculate" class="centered">
+    <div>
+      <label class="centered">
+        <span>When did you start commuting?</span>
+        <input type="date" id="start-date" />
+      </label>
+    </div>
+    <div>
+      <label class="centered">
+        <span>How many hours do you commute each day?</span>
+        <input type="number" step="any" id="hours-per-day" />
+      </label>
+    </div>
+    <div class="centered">
+      <input type="submit" value="Calculate!" class="button"/>
+    </div>
+  </form>
+  <p id="results"></p>
+
+<script type="text/javascript" charset="utf-8">
+document.getElementById("calculate").onsubmit = function() {
+    var WORK_HOURS_PER_YEAR = 2080;
+    var LEAVE_HOURS_PER_YEAR = 160;
+    var commute_hours_per_day = Number(document.getElementById("hours-per-day").value);
+    var start_date = document.getElementById("start-date").value;
+    var start = new Date(start_date);
+    if (isNaN(start.getTime())) {
+        document.getElementById("results").innerHTML = "Invalid date format... please try YYYY-MM-DD";
+        return false;
+    }
+    var elapsedMS = Date.now() - start;
+    var days = elapsedMS / 86400000;
+    var weekdays = 5.0 / 7.0 * days;
+    var hours = weekdays * 24;
+    var leave_hours = (hours / WORK_HOURS_PER_YEAR) * LEAVE_HOURS_PER_YEAR;
+    hours -= leave_hours;
+    days = hours / 24;
+    var commute_hours = days * commute_hours_per_day;
+    var commute_days = commute_hours / 24;
+    var commute_months = commute_days / (365.25 / 12);
+    var commute_years = commute_months / 12;
+
+    result = "<p>Hours spent commuting: " + commute_hours.toFixed(2) + "</p>";
+    result += "<p>Days spent commuting: " + commute_days.toFixed(2) + "</p>";
+    result += "<p>Months spent commuting: " + commute_months.toFixed(2) + "</p>";
+    result += "<p>Years spent commuting: " + commute_years.toFixed(2) + "</p>";
+
+    document.getElementById("results").innerHTML = result;
+    return false;
+};
+</script>
+
+</body>
+</html>
