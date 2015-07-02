@@ -35,6 +35,17 @@
       <input type="submit" value="Calculate!" class="button"/>
     </div>
   </form>
+  <form action="" id="reverse-calculate" class="centered">
+    <div>
+      <label class="centered">
+        <span>When would you like to give birth?</span>
+        <input type="date" id="birth-date" />
+      </label>
+    </div>
+    <div class="centered">
+      <input type="submit" value="Calculate!" class="button"/>
+    </div>
+  </form>
   <p id="results"></p>
 
 <script type="text/javascript" charset="utf-8">
@@ -50,6 +61,23 @@ document.getElementById("calculate").onsubmit = function() {
     birthday.setTime(conceive.getTime() + (280 * 86400000));
 
     result = "<p>You will give birth on " + birthday.toDateString() + "</p>";
+
+    document.getElementById("results").innerHTML = result;
+    return false;
+};
+
+document.getElementById("reverse-calculate").onsubmit = function() {
+    var birth_date = document.getElementById("birth-date").value;
+    var birth = new Date(birth_date);
+    if (isNaN(birth.getTime())) {
+        document.getElementById("results").innerHTML = "Invalid date format... please try YYYY-MM-DD";
+        return false;
+    }
+
+    var conception = new Date();
+    conception.setTime(birth.getTime() - (280 * 86400000));
+
+    result = "<p>You should conceive on " + conception.toDateString() + "</p>";
 
     document.getElementById("results").innerHTML = result;
     return false;
