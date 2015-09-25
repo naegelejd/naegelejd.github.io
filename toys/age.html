@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Leap Years? Huh!?</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="/naegelejd.css">
+  <style>
+    #wrapper {
+        width: 30em;
+    }
+
+    #results {
+        display: none;
+    }
+
+    #age {
+        text-align: right;
+    }
+
+    .button {
+        width: 12em;
+        font-weight: bold;
+        display: block;
+        margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="wrapper">
+    <h1>See how old you really are!</h1>
+
+    <form action="" id="calculate" class="centered">
+      <label>
+          When did you begin life on earth?
+          <!-- <input type="date" id="birthdate" placeholder="Jan 1, 1980 8:45"/> -->
+          <input type="date" id="birthdate" />
+      </label>
+      <input type="submit" value="Calculate!" class="button"/>
+    </form>
+
+    <div id="results">
+      <div id="age">
+        <p>You have lived (approximately):</p>
+        <p><span id="seconds"></span> seconds</p>
+        <p><span id="minutes"></span> minutes</p>
+        <p><span id="hours"></span> hours</p>
+        <p><span id="days"></span> days</p>
+        <p><span id="weeks"></span> weeks</p>
+        <p><span id="years"></span> years</p>
+      </div>
+
+      <div id="billions"></div>
+    </div> <!--id="results"-->
+  </div> <!--id="wrapper"-->
+
+<script type="text/javascript" charset="utf-8">
+
+// used to update the age values every second
+var updater;
+
+document.getElementById("calculate").onsubmit = function() {
+    // stop updating previous age
+    clearInterval(updater);
+    // show results if they are hidden (first page load)
+    document.getElementById('results').style.display = 'block';
+
+    var birthdate = new Date(document.getElementById("birthdate").value);
+    if (isNaN(birthdate.getTime())) {
+        document.getElementById("results").innerHTML = "Invalid date format... please try YYYY-MM-DD";
+        return false;
+    }
+
+    var msec = new Date() - birthdate;
+    var sec = msec / 1000;
+
+    function updateAge() {
+        var min = sec / 60;
+        var hour = min / 60;
+        var day = hour / 24;
+        var week = day / 7;
+        var year = day / 365;
+
+        //document.getElementById('milliseconds').innerHTML = msec.toFixed(2);
+        document.getElementById('seconds').innerHTML = sec.toLocaleString();
+        document.getElementById('minutes').innerHTML = min.toLocaleString();
+        document.getElementById('hours').innerHTML = hour.toLocaleString();
+        document.getElementById('days').innerHTML = day.toLocaleString();
+        document.getElementById('weeks').innerHTML = week.toLocaleString();
+        document.getElementById('years').innerHTML = year.toLocaleString();
+
+        sec++;
+    }
+
+    // ensure the results are shown immediately by calling updateAge once manually
+    updateAge();
+    updater = setInterval(updateAge, 1000);
+
+    var nbillions = Math.floor(sec / 1e9) + 1;
+    var result = "";
+    var today = new Date();
+    for (var n = 1; n < nbillions; n++) {
+      var billionth = new Date();
+      billionth.setSeconds(today.getSeconds() + n * 1e9 - sec);
+      result += "<p>You reached " + n + " billion seconds on " + billionth.toLocaleString() + "</p>";
+    }
+
+    var billionth = new Date();
+    billionth.setSeconds(today.getSeconds() + nbillions * 1e9 - sec);
+    result += "<p>You will be " + nbillions + " billion seconds old on " + billionth.toLocaleString() + "</p>";
+    document.getElementById('billions').innerHTML = result;
+
+    return false;
+};
+</script>
+
+</body>
+</html>
