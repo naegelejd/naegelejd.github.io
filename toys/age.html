@@ -87,12 +87,13 @@ document.getElementById("calculate").onsubmit = function() {
         var year = day / 365;
 
         //document.getElementById('milliseconds').innerHTML = msec.toFixed(2);
-        document.getElementById('seconds').innerHTML = sec.toLocaleString();
-        document.getElementById('minutes').innerHTML = min.toLocaleString();
-        document.getElementById('hours').innerHTML = hour.toLocaleString();
-        document.getElementById('days').innerHTML = day.toLocaleString();
-        document.getElementById('weeks').innerHTML = week.toLocaleString();
-        document.getElementById('years').innerHTML = year.toLocaleString();
+        //document.getElementById('seconds').innerHTML = sec.toLocaleString();
+        document.getElementById('seconds').innerHTML = sec.toFixed(2);
+        document.getElementById('minutes').innerHTML = min.toFixed(2);
+        document.getElementById('hours').innerHTML = hour.toFixed(2);
+        document.getElementById('days').innerHTML = day.toFixed(2);
+        document.getElementById('weeks').innerHTML = week.toFixed(2);
+        document.getElementById('years').innerHTML = year.toFixed(2);
 
         sec++;
     }
