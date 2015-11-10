@@ -2,7 +2,7 @@
 
 ## Experience
 
-Computer Programmer | Sept 2011 – Now | Kelly Gov't Solutions, FMRIF/NIH | Bethesda, MD
+Software Developer | Sept 2011 – Now | Functional MRI Facility (NIMH/NIH) | Bethesda, MD
 
 - Contributed to the [ISMRM Raw Data format](ismrmrd.github.io):
     - Wrote unit tests for the core C/C++ library
@@ -39,10 +39,20 @@ B.S. in Computer Engineering | University of Maryland, College Park | Summer 201
 ## Technical Qualifications
 
 ### Languages
-C, Python, Go, C++, Java, SQL, Haskell, Rust, Javascript, HTML, x86/PIC/MIPS assembly
+C++, C, Python, Go, Java, SQL, Haskell, Rust, Javascript, HTML, x86/PIC/MIPS assembly
 
 ### Tools
 Git, GCC/Clang, LLVM, CMake, Vim, Eclipse, GDB, Valgrind, Bison, Flex, QEMU
+
+### Interests
+Programming language and compiler design
+:   compiler/interpreter construction, garbage collection, optimization
+
+Operating systems
+:   multitasking, scheduling, memory management, file systems
+
+Modern computing
+:   distributed systems, machine learning, concurrency
 
 ### Personal Projects
 
@@ -71,10 +81,7 @@ Git, GCC/Clang, LLVM, CMake, Vim, Eclipse, GDB, Valgrind, Bison, Flex, QEMU
 - Fully re-entrant
 - Zero dependencies
 
-### Interests
-Programming language design
-:   compiler/interpreter construction, garbage collection, optimization
+[Thruput](https://github.com/naegelejd/thruput) - a TCP/UDP network throughput measurement tool
 
-Operating systems
-:   multitasking, scheduling, memory management, file systems
-
+- Offers the ability to measure with multiple, concurrent client connections
+- Linux, Windows, OS X interoperability
