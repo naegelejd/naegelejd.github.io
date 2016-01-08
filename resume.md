@@ -2,7 +2,10 @@
 
 ## Experience
 
-Software Developer | Sept 2011 – Now | Functional MRI Facility (NIMH/NIH) | Bethesda, MD
+Senior Software Engineer | Jan 2016 - Now | Grier Forensics, LLC | Garrison, MD
+
+
+Software Developer | Sep 2011 – Dec 2015 | Functional MRI Facility (NIMH/NIH) | Bethesda, MD
 
 - Contributed to the [ISMRM Raw Data format](ismrmrd.github.io):
     - Wrote unit tests for the core C/C++ library
@@ -22,6 +25,8 @@ Software Developer | Sept 2011 – Now | Functional MRI Facility (NIMH/NIH) | Be
 
 ## Education
 
+M.S. in Computer Science | Georgia Institute of Technology | Current
+
 B.S. in Computer Engineering | University of Maryland, College Park | Summer 2011
 
 > Focus on operating systems and embedded development
@@ -39,10 +44,10 @@ B.S. in Computer Engineering | University of Maryland, College Park | Summer 201
 ## Technical Qualifications
 
 ### Languages
-C++, C, Python, Go, Java, SQL, Haskell, Rust, Javascript, HTML, x86/PIC/MIPS assembly
+C++, C, Python, Go, Scala, Java, SQL, Haskell, Rust, Javascript, HTML, x86/PIC/MIPS assembly
 
 ### Tools
-Git, GCC/Clang, LLVM, CMake, Vim, Eclipse, GDB, Valgrind, Bison, Flex, QEMU
+Git, GCC/Clang, LLVM, CMake, Vim, IntelliJ, Eclipse, GDB, Valgrind, Bison, Flex, QEMU
 
 ### Interests
 Programming language and compiler design
