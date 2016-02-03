@@ -31,6 +31,13 @@ B.S. in Computer Engineering | University of Maryland, College Park | Summer 201
 
 > Focus on operating systems and embedded development
 
+## Publications
+
+Inati, S. J., Naegele, J. D., Zwart, N. R., Roopchansingh, V., Lizak, M. J., Hansen, D. C., Liu, C.-Y., Atkinson, D., Kellman, P., Kozerke, S., Xue, H., Campbell-Washburn, A. E., Sørensen, T. S. and Hansen, M. S.
+(2016), ISMRM Raw data format: A proposed standard for MRI raw datasets.
+Magn Reson Med. doi: 10.1002/mrm.26089
+
+
 ## Awards
 
 2013 Distinguished Achievement Award – Kelly Government Solutions
