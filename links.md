@@ -2,7 +2,7 @@
 
 ### Books
 
-- [Code Complete](www.cc2e.com/)
+- [Code Complete](http://www.cc2e.com/)
 - [Programming Language Pragmatics](http://www.cs.rochester.edu/~scott/pragmatics/)
 - [Learn You a Haskell for Great Good](http://learnyouahaskell.com/)
 - [Pointers on C](http://www.cs.rit.edu/~kar/pointers.on.c/)

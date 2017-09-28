@@ -4,18 +4,24 @@
 
 Senior Software Engineer | Jan 2016 - Now | Grier Forensics, LLC | Garrison, MD
 
+- Developed a large-scale (80 TB) web data collection and analysis platform
+- Developed [Great DANE](https://greatdane.io), a collection of DANE SMIMEA tools
+  enabling email privacy and security using S/MIME.
+    - Cross-platform integration server (Great DANE Engine)
+    - Thunderbird Add-On (Great DANE for Thunderbird)
+    - Identity-Management and DNS integration (Great DANE Connector)
+- Brought an in-house advanced forensics acceleration system to market
 
 Software Developer | Sep 2011 – Dec 2015 | Functional MRI Facility (NIMH/NIH) | Bethesda, MD
 
-- Contributed to the [ISMRM Raw Data format](ismrmrd.github.io):
+- Developed the [ISMRM Raw Data format](http://ismrmrd.github.io):
     - Wrote unit tests for the core C/C++ library
     - Developed Python, Java, and Golang implementations/bindings of the ISMRMRD specification
-    - Fixed bugs found by static analysis (Clang `scan-build`) and Valgrind
     - Deployed a continuous integration solution using Travis-CI and Github
-- Contributed to [Gadgetron](gadgetron.github.io), an open source medical image reconstruction framework:
+- Contributed to [Gadgetron](http://gadgetron.github.io), an open source medical image reconstruction framework:
     - Added support for creation of DICOM images
     - Developed integration tests and scripts for retrieving test data
-    - Maintained buildbot continuous integration servers
+    - Maintained Buildbot continuous integration servers
     - Developed methods of interoperability with Python using Boost
     - Contributed to API documentation
 - Designed and implemented an image archiving application which currently indexes 1.2 billion online MRI DICOM images
@@ -27,6 +33,8 @@ Software Developer | Sep 2011 – Dec 2015 | Functional MRI Facility (NIMH/NIH) 
 
 M.S. in Computer Science | Georgia Institute of Technology | Current
 
+> Focus on high-performance computing and information security
+
 B.S. in Computer Engineering | University of Maryland, College Park | Summer 2011
 
 > Focus on operating systems and embedded development
@@ -34,7 +42,7 @@ B.S. in Computer Engineering | University of Maryland, College Park | Summer 201
 ## Publications
 
 Inati, S. J., Naegele, J. D., Zwart, N. R., Roopchansingh, V., Lizak, M. J., Hansen, D. C., Liu, C.-Y., Atkinson, D., Kellman, P., Kozerke, S., Xue, H., Campbell-Washburn, A. E., Sørensen, T. S. and Hansen, M. S.
-(2016), ISMRM Raw data format: A proposed standard for MRI raw datasets.
+(2016), **ISMRM Raw data format: A proposed standard for MRI raw datasets.**
 Magn Reson Med. doi: 10.1002/mrm.26089
 
 
@@ -51,12 +59,15 @@ Magn Reson Med. doi: 10.1002/mrm.26089
 ## Technical Qualifications
 
 ### Languages
+
 C++, C, Python, Go, Scala, Java, SQL, Haskell, Rust, Javascript, HTML, x86/PIC/MIPS assembly
 
 ### Tools
+
 Git, GCC/Clang, LLVM, CMake, Vim, IntelliJ, Eclipse, GDB, Valgrind, Bison, Flex, QEMU
 
 ### Interests
+
 Programming language and compiler design
 :   compiler/interpreter construction, garbage collection, optimization
 

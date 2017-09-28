@@ -154,8 +154,6 @@
 <ul>
 <li><a href="/index.html">About</a></li>
 <li><a href="/resume.html">Resume</a></li>
-<li><a href="/links.html">Links</a></li>
-<li><a href="/snippets.html">Snippets</a></li>
 </ul>
 </nav>
 </header>
@@ -164,20 +162,29 @@
 </header>
 <h2 id="experience">Experience</h2>
 <p>Senior Software Engineer | Jan 2016 - Now | Grier Forensics, LLC | Garrison, MD</p>
+<ul>
+<li>Developed a large-scale (80 TB) web data collection and analysis platform</li>
+<li>Developed <a href="https://greatdane.io">Great DANE</a>, a collection of DANE SMIMEA tools enabling email privacy and security using S/MIME.
+<ul>
+<li>Cross-platform integration server (Great DANE Engine)</li>
+<li>Thunderbird Add-On (Great DANE for Thunderbird)</li>
+<li>Identity-Management and DNS integration (Great DANE Connector)</li>
+</ul></li>
+<li>Brought an in-house advanced forensics acceleration system to market</li>
+</ul>
 <p>Software Developer | Sep 2011 – Dec 2015 | Functional MRI Facility (NIMH/NIH) | Bethesda, MD</p>
 <ul>
-<li>Contributed to the <a href="ismrmrd.github.io">ISMRM Raw Data format</a>:
+<li>Developed the <a href="http://ismrmrd.github.io">ISMRM Raw Data format</a>:
 <ul>
 <li>Wrote unit tests for the core C/C++ library</li>
 <li>Developed Python, Java, and Golang implementations/bindings of the ISMRMRD specification</li>
-<li>Fixed bugs found by static analysis (Clang <code>scan-build</code>) and Valgrind</li>
 <li>Deployed a continuous integration solution using Travis-CI and Github</li>
 </ul></li>
-<li>Contributed to <a href="gadgetron.github.io">Gadgetron</a>, an open source medical image reconstruction framework:
+<li>Contributed to <a href="http://gadgetron.github.io">Gadgetron</a>, an open source medical image reconstruction framework:
 <ul>
 <li>Added support for creation of DICOM images</li>
 <li>Developed integration tests and scripts for retrieving test data</li>
-<li>Maintained buildbot continuous integration servers</li>
+<li>Maintained Buildbot continuous integration servers</li>
 <li>Developed methods of interoperability with Python using Boost</li>
 <li>Contributed to API documentation</li>
 </ul></li>
@@ -188,12 +195,15 @@
 </ul>
 <h2 id="education">Education</h2>
 <p>M.S. in Computer Science | Georgia Institute of Technology | Current</p>
+<blockquote>
+<p>Focus on high-performance computing and information security</p>
+</blockquote>
 <p>B.S. in Computer Engineering | University of Maryland, College Park | Summer 2011</p>
 <blockquote>
 <p>Focus on operating systems and embedded development</p>
 </blockquote>
 <h2 id="publications">Publications</h2>
-<p>Inati, S. J., Naegele, J. D., Zwart, N. R., Roopchansingh, V., Lizak, M. J., Hansen, D. C., Liu, C.-Y., Atkinson, D., Kellman, P., Kozerke, S., Xue, H., Campbell-Washburn, A. E., Sørensen, T. S. and Hansen, M. S. (2016), ISMRM Raw data format: A proposed standard for MRI raw datasets. Magn Reson Med. doi: 10.1002/mrm.26089</p>
+<p>Inati, S. J., Naegele, J. D., Zwart, N. R., Roopchansingh, V., Lizak, M. J., Hansen, D. C., Liu, C.-Y., Atkinson, D., Kellman, P., Kozerke, S., Xue, H., Campbell-Washburn, A. E., Sørensen, T. S. and Hansen, M. S. (2016), <strong>ISMRM Raw data format: A proposed standard for MRI raw datasets.</strong> Magn Reson Med. doi: 10.1002/mrm.26089</p>
 <h2 id="awards">Awards</h2>
 <p>2013 Distinguished Achievement Award – Kelly Government Solutions</p>
 <blockquote>
@@ -252,7 +262,7 @@
 <li>Linux, Windows, OS X interoperability</li>
 </ul>
 <footer>
-© 2015 Joseph Naegele <a href="/toys/">.</a>
+© 2017 Joseph Naegele <a href="/toys/">.</a>
 </footer>
 <script src="scale.fix.js"></script>
 
