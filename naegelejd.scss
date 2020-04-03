@@ -4,9 +4,10 @@ $border_color: #efefef;
 
 body {
     margin: auto;
-    padding-right: 1em;
-    padding-left: 1em;
-    max-width: 44em;
+    // padding-right: 1em;
+    // padding-left: 1em;
+    padding: 1em;
+    max-width: 56rem;
     border-left: 1px dotted $border_color;
     border-right: 1px dotted $border_color;
     line-height: 140%;
@@ -24,7 +25,7 @@ nav {
 
     li {
         display: inline;
-        text-align:center;
+        text-align: center;
         a {
             padding: .2em .8em;
         }
@@ -56,16 +57,21 @@ code {
     font-family: monospace;
 }
 
+strong {
+    font-size: 105%;
+}
+
 h1, h2, h3, h4, h5 {
     font-weight: bold;
-    border-bottom: 1px dotted black;
+    padding: .2em;
+    border-bottom: 1px dotted $border_color;
     a {
         text-decoration: none;
     }
 }
 
 h1 {
-    font-size: 130%;
+    font-size: 140%;
     text-align: center;
     &.master {
         font-size: 200%;
@@ -78,15 +84,15 @@ h1 {
 }
 
 h2 {
-    font-size: 110%;
+    font-size: 125%;
 }
 
 h3 {
-    font-size: 95%;
+    font-size: 105%;
 }
 
 h4 {
-    font-size: 90%;
+    font-size: 95%;
     font-style: italic;
 }
 
@@ -95,12 +101,29 @@ h5 {
     font-style: italic;
 }
 
-dt code {
+
+dt {
+    float: left;
+    clear: left;
+    width: 32%;
+    //text-align: right;
     font-weight: bold;
 }
 
-dd p {
+dd {
+    margin-left: 33%;
+    padding-bottom: .5em;
+}
+
+/*
+p {
     margin-top: 0;
+    margin-bottom: 7px;
+}
+*/
+
+blockquote {
+    text-align: center;
 }
 
 footer {

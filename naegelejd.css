@@ -1,84 +1,122 @@
 @import url("normalize.css");
 body {
   margin: auto;
-  padding-right: 1em;
-  padding-left: 1em;
-  max-width: 44em;
+  padding: 1em;
+  max-width: 56rem;
   border-left: 1px dotted #efefef;
   border-right: 1px dotted #efefef;
   line-height: 140%;
   font-size: 100%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 nav {
-  text-align: center; }
-  nav ul {
-    margin: auto;
-    padding: .2em 0em; }
-  nav li {
-    display: inline;
-    text-align: center; }
-    nav li a {
-      padding: .2em .8em; }
+  text-align: center;
+}
+nav ul {
+  margin: auto;
+  padding: 0.2em 0em;
+}
+nav li {
+  display: inline;
+  text-align: center;
+}
+nav li a {
+  padding: 0.2em 0.8em;
+}
 
 a {
   color: #39c;
   font-weight: 400;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 img {
   float: left;
-  margin: 0em 2em; }
+  margin: 0em 2em;
+}
 
 pre {
   border: 1px dotted gray;
   background-color: #EEEEEE;
-  padding: 0.5em; }
+  padding: 0.5em;
+}
 
 code {
-  font-family: monospace; }
+  font-family: monospace;
+}
+
+strong {
+  font-size: 105%;
+}
 
 h1, h2, h3, h4, h5 {
   font-weight: bold;
-  border-bottom: 1px dotted black; }
-  h1 a, h2 a, h3 a, h4 a, h5 a {
-    text-decoration: none; }
+  padding: 0.2em;
+  border-bottom: 1px dotted #efefef;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a {
+  text-decoration: none;
+}
 
 h1 {
-  font-size: 130%;
-  text-align: center; }
-  h1.master {
-    font-size: 200%;
-    font-weight: bold;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    text-align: center;
-    border: none; }
+  font-size: 140%;
+  text-align: center;
+}
+h1.master {
+  font-size: 200%;
+  font-weight: bold;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  text-align: center;
+  border: none;
+}
 
 h2 {
-  font-size: 110%; }
+  font-size: 125%;
+}
 
 h3 {
-  font-size: 95%; }
+  font-size: 105%;
+}
 
 h4 {
-  font-size: 90%;
-  font-style: italic; }
+  font-size: 95%;
+  font-style: italic;
+}
 
 h5 {
   font-size: 90%;
-  font-style: italic; }
+  font-style: italic;
+}
 
-dt code {
-  font-weight: bold; }
+dt {
+  float: left;
+  clear: left;
+  width: 32%;
+  font-weight: bold;
+}
 
-dd p {
-  margin-top: 0; }
+dd {
+  margin-left: 33%;
+  padding-bottom: 0.5em;
+}
+
+/*
+p {
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+*/
+blockquote {
+  text-align: center;
+}
 
 footer {
   padding-top: 1em;
   font-size: 80%;
-  text-align: center; }
+  text-align: center;
+}
 
 /*# sourceMappingURL=naegelejd.css.map */

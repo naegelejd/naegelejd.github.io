@@ -4,7 +4,7 @@ SOURCE := naegelejd.md
 HEAD := head.html
 HEADER := header.html
 FOOTER := footer.html
-OPTS := --standalone --smart -f markdown+definition_lists
+OPTS := --standalone -f markdown+definition_lists+smart
 
 all: $(OUTPUT) $(STYLE)
 

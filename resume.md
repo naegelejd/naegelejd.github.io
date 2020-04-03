@@ -2,9 +2,28 @@
 
 ## Experience
 
-Senior Software Engineer | Jan 2016 - Now | Grier Forensics, LLC | Garrison, MD
+<!-- **Lead Engineer**\ -->
 
-- Developed a large-scale (80 TB) web data collection and analysis platform
+### Lead Engineer @ Grier Forensics
+
+Apr 2020 - Now\
+Owings Mills, MD
+
+- Led a team of five software engineers across multiple customer projects, involving
+    - Airborne Cyber Defense through Packet Level Non-Repdudiation (PLNR)
+    - Offline, Anonymous Internet access
+    - Cyber Security Appliances for Industrial Control (SCADA) Systems
+    - Rapid Forensic Device Imaging
+- Developed engineering processes and facilitated firm-wide adoption
+- Planned, scheduled, and designed special projects, both internal and customer-facing
+
+
+### Senior Software Engineer @ Grier Forensics
+
+Jan 2016 - Mar 2020\
+Owings Mills, MD
+
+- Developed a large-scale (800 TB) web data collection and analysis platform
 - Developed [Great DANE](https://greatdane.io), a collection of DANE SMIMEA tools
   enabling email privacy and security using S/MIME.
     - Cross-platform integration server (Great DANE Engine)
@@ -12,7 +31,11 @@ Senior Software Engineer | Jan 2016 - Now | Grier Forensics, LLC | Garrison, MD
     - Identity-Management and DNS integration (Great DANE Connector)
 - Brought an in-house advanced forensics acceleration system to market
 
-Software Developer | Sep 2011 – Dec 2015 | Functional MRI Facility (NIMH/NIH) | Bethesda, MD
+
+### Software Developer @ the Functional MRI Facility (NIMH/NIH)
+
+Sep 2011 – Dec 2015\
+Bethesda, MD
 
 - Developed the [ISMRM Raw Data format](http://ismrmrd.github.io):
     - Wrote unit tests for the core C/C++ library
@@ -31,30 +54,34 @@ Software Developer | Sep 2011 – Dec 2015 | Functional MRI Facility (NIMH/NIH) 
 
 ## Education
 
-M.S. in Computer Science | Georgia Institute of Technology | Current
+M.S. in Computer Science
+:    Georgia Institute of Technology, Fall 2018
 
-> Focus on high-performance computing and information security
+    *High-performance computing and information security focus*
 
-B.S. in Computer Engineering | University of Maryland, College Park | Summer 2011
+B.S. in Computer Engineering
+:   University of Maryland, College Park, Summer 2011
 
-> Focus on operating systems and embedded development
+    *Operating systems and embedded development focus*
 
 ## Publications
 
-Inati, S. J., Naegele, J. D., Zwart, N. R., Roopchansingh, V., Lizak, M. J., Hansen, D. C., Liu, C.-Y., Atkinson, D., Kellman, P., Kozerke, S., Xue, H., Campbell-Washburn, A. E., Sørensen, T. S. and Hansen, M. S.
+1. Inati, S. J., Naegele, J. D., Zwart, N. R., Roopchansingh, V., Lizak, M. J., Hansen, D. C., Liu, C.-Y., Atkinson, D., Kellman, P., Kozerke, S., Xue, H., Campbell-Washburn, A. E., Sørensen, T. S. and Hansen, M. S.
 (2016), **ISMRM Raw data format: A proposed standard for MRI raw datasets.**
 Magn Reson Med. doi: 10.1002/mrm.26089
 
 
 ## Awards
 
-2013 Distinguished Achievement Award – Kelly Government Solutions
+Distinguished Achievement Award
+:   Kelly Government Solutions, 2013
 
-> For technical skill, enthusiasm, capacity for learning, and completion of several complex projects.
+    *For technical skill, enthusiasm, capacity for learning, and completion of several complex projects.*
 
-2015 Distinguished Achievement Award - Kelly Government Solutions
+Distinguished Achievement Award
+:   Kelly Government Solutions, 2015
 
-> For computing environment improvements and contributions to ISMRMRD and Gadgetron.
+    *For computing environment improvements and contributions to ISMRMRD and Gadgetron.*
 
 ## Technical Qualifications
 
@@ -68,14 +95,14 @@ Git, GCC/Clang, LLVM, CMake, Vim, IntelliJ, Eclipse, GDB, Valgrind, Bison, Flex,
 
 ### Interests
 
-Programming language and compiler design
-:   compiler/interpreter construction, garbage collection, optimization
+Language/Compiler Design
+:   Compiler/Interpreter Construction, Garbage Collection, Optimization
 
-Operating systems
-:   multitasking, scheduling, memory management, file systems
+Operating Systems
+:   Multitasking, Scheduling, Memory Management, File Systems
 
-Modern computing
-:   distributed systems, machine learning, concurrency
+Modern Computing
+:   Distributed Systems, Machine Learning, Concurrency
 
 ### Personal Projects
 
