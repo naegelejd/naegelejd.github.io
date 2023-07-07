@@ -4,158 +4,40 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>About</title>
+  <title>About Joe</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="naegelejd.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD4WFPXPE6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LD4WFPXPE6');
+  </script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  <script src="jquery.terminal/js/jquery-1.7.1.min.js"></script>
-  <script src="jquery.terminal/js/jquery.mousewheel-min.js"></script>
-  <script src="jquery.terminal/js/jquery.terminal-0.8.8.min.js"></script>
-  <link href="jquery.terminal/css/jquery.terminal.css" rel="stylesheet"/>
-  <!--[if IE]>
-  <style>
-  body {
-      margin: 0;
-      padding: 0;
-  }
-  .tilda {
-      position: absolute;
-  }
-  </style>
-  <script>
-  jQuery(document).ready(function($) {
-     $(window).scroll(function() {
-        $('.tilda').each(function() {
-           $(this).css({top: $('body').prop('scrollTop')});
-        });
-     });
-  });
-  </script>
-  <![endif]-->
-  <script>
-
-
-  String.prototype.strip = function(char) {
-      return this.replace(new RegExp("^" + char + "*"), '').
-          replace(new RegExp(char + "*$"), '');
-  }
-
-
-  $.extend_if_has = function(desc, source, array) {
-      for (var i=array.length;i--;) {
-          if (typeof source[array[i]] != 'undefined') {
-              desc[array[i]] = source[array[i]];
-          }
-      }
-      return desc;
-  };
-
-
-  (function($) {
-      $.fn.tilda = function(eval, options) {
-          if ($('body').data('tilda')) {
-              return $('body').data('tilda').terminal;
-          }
-          this.addClass('tilda');
-          options = options || {};
-          eval = eval || function(command, term) {
-              term.echo("you don't set eval for tilda");
-          };
-          var settings = {
-              keypress: function(e) {
-                  if (e.which == 96) {
-                      return false;
-                  }
-              }
-          };
-          if (options) {
-              $.extend(settings, options);
-          }
-          this.append('<div class="td"></div>');
-          var self = this;
-          self.terminal = this.find('.td').terminal(eval, settings);
-          var focus = false;
-          $(document.documentElement).keypress(function(e) {
-              if (e.which == 96) {
-                  self.slideToggle('fast');
-                  self.terminal.focus(focus = !focus);
-                  self.terminal.attr({
-                      scrollTop: self.terminal.attr("scrollHeight")
-                  });
-              }
-          });
-          $('body').data('tilda', this);
-          this.hide();
-          return self;
-      };
-  })(jQuery);
-
-  //--------------------------------------------------------------------------
-  jQuery(document).ready(function($) {
-      $('#tilda').tilda({
-          calc: {
-              add: function(a, b) {
-                  this.echo(a+b);
-              },
-              sub: function(a, b) {
-                  this.echo(a-b);
-              },
-          },
-          clear: function() {
-              this.clear();
-          },
-          fortune: function() {
-            var terminal = this;
-            $.getJSON("http://api.theysaidso.com/qod.json", function(data) {
-                terminal.echo("\"" + data.contents.quote + "\" - " + data.contents.author + "\n" + '<span style="z-index:50;font-size:0.9em;"><img src="http://theysaidso.com/branding/theysaidso.png" height="20" width="20" alt="theysaidso.com"/><a href="http://theysaidso.com" title="Powered by quotes from theysaidso.com" style="color: #9fcc25; margin-left: 4px; vertical-align: middle;">theysaidso.com</a></span>', {raw: true});
-            }).fail(function() {
-                terminal.echo("Message Of The Day!");
-            });
-          },
-          help: function() {
-              this.echo("Try your TAB key");
-          },
-          weather: function() {
-              var terminal = this;
-              terminal.echo("just a sec...");
-              if ("geolocation" in navigator) {
-                  navigator.geolocation.getCurrentPosition(function(position) {
-                      var params = {lat: position.coords.latitude, lon: position.coords.longitude, units:"imperial"};
-                      $.getJSON("http://api.openweathermap.org/data/2.5/weather", params, function(data) {
-                          terminal.echo(data.weather[0].main + ", " + data.main.temp + "˚F, " + data.main.humidity + "% humidity");
-                      }).fail(function(jqXHR, textStatus, errorThrown) {
-                          terminal.echo("error: failed to look up weather for" + loc + " (" + textStatus + ")");
-                      });
-                  });
-              } else {
-                  terminal.echo("no geolocation services available :(");
-              }
-          },
-      }, {
-        history: true,
-        prompt: 'λ> ',
-        name: 'lambda',
-        clear: false,
-        height: 100,
-        enabled: false,
-        greetings: function(callback) { /* TODO: use quote API? */ callback('¡Pura Vida!'); },
-      });
-  });
-
-  </script>
 </head>
 <body>
 <header>
-<div id="tilda"></div>
 <h1 class="master">Joseph Naegele</h1>
 <nav id="TOC">
 <ul>
@@ -165,27 +47,33 @@
 </nav>
 </header>
 <header id="title-block-header">
-<h1 class="title">About</h1>
+<h1 class="title">About Joe</h1>
 </header>
-<p><a href="https://github.com/naegelejd"><img src="joe.png" title="Preparing for my wedding reception" /></a></p>
-<p>Joe Naegele is a Senior Software Engineer at Grier Forensics, where he has led development of an analytics platform for large scale (80 TB) web data developed for the US Air Force, and of Great DANE, a cross-platform suite of tools for email security, and led enhancements to Grier Forensics’ advanced forensics acceleration system.</p>
-<p>Joe is experienced in C++, Java, Scala, Go, Python, the Apache Spark cluster-computing framework, and other platforms and languages; has developed software for Linux, Windows, and Mac OS X; and is proficient in multiple DBMS.</p>
-<p>Prior to joining Grier, Joe served as Software Engineer at the Functional MRI Facility at the National Institutes of Health, where he helped develop a medical image reconstruction framework using Python and C++, which stored, converted, and extracted MRI data, provided on-screen visualizations, and performed statistical analysis. He also helped create the ISMRM format for MRI datasets, including APIs for C/C++, Python, and MATLAB. His work resulted in peer-reviewed publication in Magnetic Resonance in Medicine, as well as a popular open source implementation.</p>
-<p>In his spare time, Joe enjoys studying programming language design and runtime implementations, learning <em>new</em> programming languages and APIs, listening to music and playing guitar. He recently became a father to a beautiful baby girl.</p>
+<p><a href="https://github.com/naegelejd"><img src="joe.png"
+title="Traveling" /></a></p>
+<p>Joe Naegele is the Lead Engineer at Grier Forensics, where he
+currently leads Origination of all new advanced research and development
+projects. Joe has led development of SilentWeb, an analytics platform
+for large scale (600 TB) web data developed for the US Air Force;
+FireSky, Grier’s distributed cyber defense system for tactical IP
+networks, also developed for the US Air Force; Thunderboost, Grier’s
+automated forensics platform; and the Great DANE suite of tools for
+email security.</p>
+<p>Prior to joining Grier, Joe served as Software Engineer at the
+Functional MRI Facility at the National Institutes of Health, where he
+helped develop a medical image reconstruction framework using Python and
+C++, which stored, converted, and extracted MRI data, provided on-screen
+visualizations, and performed statistical analysis. He also helped
+create the ISMRM format for MRI datasets, including APIs for C/C++,
+Python, and MATLAB. His work resulted in peer-reviewed publication in
+Magnetic Resonance in Medicine, as well as a popular open source
+implementation.</p>
+<p>In his spare time, Joe enjoys buiding fun demos to learn new
+technology, skateboarding and working out, making music in his studio,
+practicing Spanish, and planning the next big thing for his two
+beautiful young children.</p>
 <footer>
-© 2017 Joseph Naegele <a href="/toys/">.</a>
+© 2023 Joseph Naegele <a href="/toys/">.</a>
 </footer>
-<script src="scale.fix.js"></script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-54475644-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </body>
 </html>

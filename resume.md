@@ -9,11 +9,14 @@
 Apr 2020 - Now\
 Owings Mills, MD
 
-- Led a team of five software engineers across multiple customer projects, involving
-    - Airborne Cyber Defense through Packet Level Non-Repdudiation (PLNR)
-    - Offline, Anonymous Internet access
-    - Cyber Security Appliances for Industrial Control (SCADA) Systems
+- Leading Origination: Grier's research, proposal, and development efforts
+- Brought a custom forensics acceleration system to market
+- Led multiple teams of software engineers across multiple customer projects, involving
+    - Airborne Cyber Defense through Packet Level Non-Repdudiation
+    - Offline, Anonymous World Wide Web for Open-Source Intelligence
+    - Cyber Security Appliances for Operational Technology, ICS and SCADA Systems
     - Rapid Forensic Device Imaging
+    - Email privacy and security
 - Developed engineering processes and facilitated firm-wide adoption
 - Planned, scheduled, and designed special projects, both internal and customer-facing
 
@@ -23,13 +26,13 @@ Owings Mills, MD
 Jan 2016 - Mar 2020\
 Owings Mills, MD
 
-- Developed a large-scale (800 TB) web data collection and analysis platform
+- Developed a large-scale (600 TB) web data collection and analysis platform
+    - Designed and implemented in Scala a framework for storing and analyzing billions of web resources
+    - Designed and built a distributed, high-performance web crawler using Apache Spark
+- Developed components of an airborne cyber defense solution for tactical IP networks
 - Developed [Great DANE](https://greatdane.io), a collection of DANE SMIMEA tools
   enabling email privacy and security using S/MIME.
-    - Cross-platform integration server (Great DANE Engine)
-    - Thunderbird Add-On (Great DANE for Thunderbird)
-    - Identity-Management and DNS integration (Great DANE Connector)
-- Brought an in-house advanced forensics acceleration system to market
+- Orchestrated software demos for Army, Air Force, SOCOM, and industry stakeholders
 
 
 ### Software Developer @ the Functional MRI Facility (NIMH/NIH)
@@ -38,37 +41,34 @@ Sep 2011 – Dec 2015\
 Bethesda, MD
 
 - Developed the [ISMRM Raw Data format](http://ismrmrd.github.io):
-    - Wrote unit tests for the core C/C++ library
+    - Designed and implemented unit tests for the core C/C++ library
     - Developed Python, Java, and Golang implementations/bindings of the ISMRMRD specification
     - Deployed a continuous integration solution using Travis-CI and Github
-- Contributed to [Gadgetron](http://gadgetron.github.io), an open source medical image reconstruction framework:
-    - Added support for creation of DICOM images
-    - Developed integration tests and scripts for retrieving test data
-    - Maintained Buildbot continuous integration servers
+- Contributed to the [Gadgetron](http://gadgetron.github.io) Medical Image Reconstruction Framework
+    - Added DICOM image generation support
+    - Developed continuous integration system, tests, and scripts for retrieving test data
     - Developed methods of interoperability with Python using Boost
-    - Contributed to API documentation
-- Designed and implemented an image archiving application which currently indexes 1.2 billion online MRI DICOM images
-- Refactored QA analysis and visualization software for five MRI scanners, primarily using Python
-- Wrote a C library to interface with a proprietary MRI raw data file format in order to create vendor-neutral ISMRMRD files
-- Deployed secure, shared project environments using NFSv4, Kerberos and POSIX ACLs on Linux VMs
+- Designed and implemented an image archiving application indexing 1.2 billion  MRI DICOM images
+- Refactored QA analysis and visualization software for five MRI scanners using Python
+- Constructed a C library for creating vendor-neutral ISMRMRD files from proprietary MRI data files
+- Deployed secure, collaborative project environments using NFSv4, Kerberos and POSIX ACLs on Linux VMs
+
 
 ## Education
 
 M.S. in Computer Science
 :    Georgia Institute of Technology, Fall 2018
 
-    *High-performance computing and information security focus*
 
 B.S. in Computer Engineering
 :   University of Maryland, College Park, Summer 2011
 
-    *Operating systems and embedded development focus*
 
 ## Publications
 
 1. Inati, S. J., Naegele, J. D., Zwart, N. R., Roopchansingh, V., Lizak, M. J., Hansen, D. C., Liu, C.-Y., Atkinson, D., Kellman, P., Kozerke, S., Xue, H., Campbell-Washburn, A. E., Sørensen, T. S. and Hansen, M. S.
-(2016), **ISMRM Raw data format: A proposed standard for MRI raw datasets.**
-Magn Reson Med. doi: 10.1002/mrm.26089
+(2017). **ISMRM Raw data format: A proposed standard for MRI raw datasets.**.
+Magnetic Resonance in Medicine Vol. 77(1), 411-421. doi: 10.1002/mrm.26089
 
 
 ## Awards
@@ -83,28 +83,32 @@ Distinguished Achievement Award
 
     *For computing environment improvements and contributions to ISMRMRD and Gadgetron.*
 
+
 ## Technical Qualifications
 
 ### Languages
 
-C++, C, Python, Go, Scala, Java, SQL, Haskell, Rust, Javascript, HTML, x86/PIC/MIPS assembly
+C++, C, Python, Go, Scala, Java, SQL, JavaScript, HTML, x86/PIC/MIPS assembly, and many more
+
 
 ### Tools
 
-Git, GCC/Clang, LLVM, CMake, Vim, IntelliJ, Eclipse, GDB, Valgrind, Bison, Flex, QEMU
+Git, GCC/Clang, IntelliJ, Apache Spark/Hadoop, Elasticsearch, LLVM, CMake, GDB, Valgrind, Bison, Flex, QEMU...
+
 
 ### Interests
 
-Language/Compiler Design
-:   Compiler/Interpreter Construction, Garbage Collection, Optimization
+Programming Languages & Compilers
+:   Compiler/Interpreter Construction, Static Analysis, Garbage Collection, Optimization
 
 Operating Systems
 :   Multitasking, Scheduling, Memory Management, File Systems
 
 Modern Computing
-:   Distributed Systems, Machine Learning, Concurrency
+:   Distributed Systems, Machine Learning, Cloud Compute Services, DevSecOps, Data Fusion
 
-### Personal Projects
+
+### Past Personal Projects
 
 [Luci](http://josephnaegele.com/luci) - a lightweight programming language
 
