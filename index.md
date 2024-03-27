@@ -1,24 +1,12 @@
-% About Joe
+% About Me
 
 [![](joe.png "Traveling")](https://github.com/naegelejd)
 
-Joe Naegele is the Lead Engineer at Grier Forensics, where he currently leads
-Origination of all new advanced research and development projects.
-Joe has led development of SilentWeb, an analytics platform for large scale
-(600 TB) web data developed for the US Air Force; FireSky, Grier's distributed
-cyber defense system for tactical IP networks, also developed for the US Air
-Force; Thunderboost, Grier's automated forensics platform; and the Great DANE
-suite of tools for email security.
+I am currently working under contract for Microsoft Research, developing software with the Biomedical Signal Processing group in Microsoft Health Futures.
+I am thrilled to work on open source projects like [yardl](https://github.com/microsoft/yardl) and [tyger](https://github.com/microsoft/tyger), bringing cloud-based signal processing to medical imaging.
 
-Prior to joining Grier, Joe served as Software Engineer at the Functional
-MRI Facility at the National Institutes of Health, where he helped develop
-a medical image reconstruction framework using Python and C++, which stored,
-converted, and extracted MRI data, provided on-screen visualizations, and
-performed statistical analysis. He also helped create the ISMRM format for MRI
-datasets, including APIs for C/C++, Python, and MATLAB. His work resulted in
-peer-reviewed publication in Magnetic Resonance in Medicine, as well as
-a popular open source implementation.
+Previously, I was the Lead Engineer at Grier Forensics, where I originated many new advanced research and development projects. I led development of [SilentWeb](https://www.grierforensics.com/capabilities/anonymous-internet/), an analytics platform for large scale (600 TB) web data developed for the US Air Force; [FireSky](https://www.grierforensics.com/capabilities/airborne-cyber-defense/), Grier's distributed cyber defense system for tactical IP networks, also developed for the US Air Force; [Thunderboost](https://www.grierforensics.com/capabilities/device-forensics/), Grier's automated forensics platform; and the [Great DANE](https://greatdane.io/) suite of tools for email security.
 
-In his spare time, Joe enjoys buiding fun demos to learn new technology,
-skateboarding and working out, making music in his studio, practicing Spanish,
-and planning the next big thing for his two beautiful young children.
+Prior to joining Grier, I was a Software Engineer at the Functional MRI Facility at the National Institutes of Health, where I helped develop [Gadgetron](https://gadgetron.github.io/), the open-source medical image reconstruction framework. I also helped create the [ISMRM format](https://ismrmrd.readthedocs.io/en/latest/) for MRI datasets, including APIs for C/C++, Python, and MATLAB. My work resulted in a peer-reviewed publication in Magnetic Resonance in Medicine, as well as a popular open source [implementation](https://github.com/ismrmrd/ismrmrd).
+
+In my spare time, I enjoy fun adventures with my awesome kids, tinkering with software projects, skateboarding and working out, making music, practicing Spanish, and many other fun side quests.
