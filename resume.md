@@ -2,14 +2,25 @@
 
 ## Experience
 
-<!-- **Lead Engineer**\ -->
+### Senior Research Engineer @ Microsoft Research
+
+Oct 2024 - Now\
+Remote - Contracted by Aquent
+
+Member of the Biomedical Signal Processing team at Microsoft Health Futures.
+
+- Contributed major features to [Yardl](https://microsoft.github.io/yardl):
+    - Designed the Schema Evolution feature for stream-oriented data models
+    - Added full support for MATLAB code generation
+- Building and releasing the next generation of the Magnetic Resonance Data (MRD) standard and SDKS.
+
 
 ### Lead Engineer @ Grier Forensics
 
-Apr 2020 - Now\
+Apr 2020 - Sep 2023\
 Owings Mills, MD
 
-- Leading Origination: Grier's research, proposal, and development efforts
+- Led Origination: Grier's research, proposal, and development efforts
 - Brought a custom forensics acceleration system to market
 - Led multiple teams of software engineers across multiple customer projects, involving
     - Airborne Cyber Defense through Packet Level Non-Repdudiation
