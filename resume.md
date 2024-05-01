@@ -7,12 +7,11 @@
 Oct 2024 - Now\
 Remote - Contracted by Aquent
 
-Member of the Biomedical Signal Processing team at Microsoft Health Futures.
-
+- Member of the Biomedical Signal Processing team at Microsoft Health Futures
 - Contributed major features to [Yardl](https://microsoft.github.io/yardl):
-    - Designed the Schema Evolution feature for stream-oriented data models
+    - Designed the [Schema Evolution feature](https://microsoft.github.io/yardl/cpp/evolution.html) for stream-oriented data models
     - Added full support for MATLAB code generation
-- Building and releasing the next generation of the Magnetic Resonance Data (MRD) standard and SDKS.
+- Building and releasing the next generation of the Magnetic Resonance Data (MRD) standard and SDKs
 
 
 ### Lead Engineer @ Grier Forensics
@@ -20,16 +19,17 @@ Member of the Biomedical Signal Processing team at Microsoft Health Futures.
 Apr 2020 - Sep 2023\
 Owings Mills, MD
 
-- Led Origination: Grier's research, proposal, and development efforts
-- Brought a custom forensics acceleration system to market
-- Led multiple teams of software engineers across multiple customer projects, involving
-    - Airborne Cyber Defense through Packet Level Non-Repdudiation
-    - Offline, Anonymous World Wide Web for Open-Source Intelligence
-    - Cyber Security Appliances for Operational Technology, ICS and SCADA Systems
-    - Rapid Forensic Device Imaging
-    - Email privacy and security
+- 3-year tenure as member of the senior leadership team, responsible for company-wide operational initiatives and strategy
+- Secured 6+ US defense contract awards as lead of Origination: Grier's research, design, and proposal development team
+- Led teams of software engineers across multiple customer projects, including
+    - Large-scale web data analytics
+    - Tactical airborne cyber defense
+    - Forensic Intelligence using AI/ML
+    - Automated IoT and Industrial Control System security
+    - Geospatial applications of Transfer Learning.
+    - Modern email security
 - Developed engineering processes and facilitated firm-wide adoption
-- Planned, scheduled, and designed special projects, both internal and customer-facing
+- Planned, scheduled, designed, and implemented special projects, both internal and customer-facing
 
 
 ### Senior Software Engineer @ Grier Forensics
@@ -42,7 +42,7 @@ Owings Mills, MD
     - Designed and built a distributed, high-performance web crawler using Apache Spark
 - Developed components of an airborne cyber defense solution for tactical IP networks
 - Developed [Great DANE](https://greatdane.io), a collection of DANE SMIMEA tools
-  enabling email privacy and security using S/MIME.
+  enabling email privacy and security using S/MIME
 - Orchestrated software demos for Army, Air Force, SOCOM, and industry stakeholders
 
 
@@ -99,27 +99,26 @@ Distinguished Achievement Award
 
 ### Languages
 
-C++, C, Python, Go, Scala, Java, SQL, JavaScript, HTML, x86/PIC/MIPS assembly, and many more
+C++, C, Python, Go, Scala, Java, SQL, JavaScript, MATLAB, HTML, x86/PIC/MIPS assembly, and many more
 
 
 ### Tools
 
-Git, GCC/Clang, IntelliJ, Apache Spark/Hadoop, Elasticsearch, LLVM, CMake, GDB, Valgrind, Bison, Flex, QEMU...
+Git, GCC/Clang, VS Code, Apache Spark/Hadoop, Elasticsearch, LLVM, CMake, GDB, Valgrind, Bison, Flex, QEMU...
 
 
-### Interests
+### Open Source Projects 
 
-Programming Languages & Compilers
-:   Compiler/Interpreter Construction, Static Analysis, Garbage Collection, Optimization
+I have participated in the development of the following projects:
 
-Operating Systems
-:   Multitasking, Scheduling, Memory Management, File Systems
+- [Yardl](https://microsoft.github.io/yardl/): A schema language and command-line tool that generates domain types and serialization code.
 
-Modern Computing
-:   Distributed Systems, Machine Learning, Cloud Compute Services, DevSecOps, Data Fusion
+- [Gadgetron](https://gadgetron.github.io/): An open source framework for medical image reconstruction.
+
+- [ISMRMRD](https://ismrmrd.readthedocs.io/en/latest/): SDKs for the Magnetic Resonance Data (MRD) format, a vendor neutral standard for describing data from MR acquisitions and reconstructions.
 
 
-### Past Personal Projects
+### Hobby Projects From the Past
 
 [Luci](http://josephnaegele.com/luci) - a lightweight programming language
 
