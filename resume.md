@@ -1,17 +1,26 @@
-% Resume
+% Curriculum Vitae
 
 ## Experience
 
-### Senior Research Engineer @ Microsoft Research
+### Principal Software Development Engineer @ Microsoft
 
-Oct 2024 - Now\
+Jan 2025 - Now\
+Remote
+
+- Member of the Diagnostic Imaging Team at Microsoft Research - Health Futures
+- Developing new stream-oriented medical image reconstruction framework and related infrastructure
+
+
+### Senior Research Engineer @ Microsoft
+
+Oct 2023 - Dec 2024\
 Remote - Contracted by Aquent
 
-- Member of the Biomedical Signal Processing team at Microsoft Health Futures
+- Member of the Biomedical Signal Processing team at Microsoft Research - Health Futures
 - Contributed major features to [Yardl](https://microsoft.github.io/yardl):
     - Designed the [Schema Evolution feature](https://microsoft.github.io/yardl/cpp/evolution.html) for stream-oriented data models
     - Added full support for MATLAB code generation
-- Building and releasing the next generation of the Magnetic Resonance Data (MRD) standard and SDKs
+- Built and released the next generation of the Magnetic Resonance Data (MRD) standard and SDKs
 
 
 ### Lead Engineer @ Grier Forensics
@@ -84,37 +93,32 @@ Magnetic Resonance in Medicine Vol. 77(1), 411-421. doi: 10.1002/mrm.26089
 
 ## Awards
 
-Distinguished Achievement Award
-:   Kelly Government Solutions, 2013
+2016 Orloff Innovations Award
+:   National Heart, Lung, and Blood Institute (NHLBI)
 
-    *For technical skill, enthusiasm, capacity for learning, and completion of several complex projects.*
+    *For developing image reconstruction software that enables deployment of high-performance MRI techniques in a clinical setting.*
 
-Distinguished Achievement Award
-:   Kelly Government Solutions, 2015
+2015 Distinguished Achievement Award
+:   Kelly Government Solutions
 
     *For computing environment improvements and contributions to ISMRMRD and Gadgetron.*
 
+2013 Distinguished Achievement Award
+:   Kelly Government Solutions
 
-## Technical Qualifications
-
-### Languages
-
-C++, C, Python, Go, Scala, Java, SQL, JavaScript, MATLAB, HTML, x86/PIC/MIPS assembly, and many more
+    *For technical skill, enthusiasm, capacity for learning, and completion of several complex projects.*
 
 
-### Tools
+## Projects
 
-Git, GCC/Clang, VS Code, Apache Spark/Hadoop, Elasticsearch, LLVM, CMake, GDB, Valgrind, Bison, Flex, QEMU...
+### Open Source Projects
 
+I have served as a maintainer of the following projects:
 
-### Open Source Projects 
-
-I have participated in the development of the following projects:
-
+- [Pingvin](https://github.com/gadgetron/pingvin):  A new, stream-oriented medical image reconstruction framework.
+- [MRD2](https://ismrmrd.github.io/mrd/): The next generation Magnetic Resonance Data format.
 - [Yardl](https://microsoft.github.io/yardl/): A schema language and command-line tool that generates domain types and serialization code.
-
 - [Gadgetron](https://gadgetron.github.io/): An open source framework for medical image reconstruction.
-
 - [ISMRMRD](https://ismrmrd.readthedocs.io/en/latest/): SDKs for the Magnetic Resonance Data (MRD) format, a vendor neutral standard for describing data from MR acquisitions and reconstructions.
 
 
